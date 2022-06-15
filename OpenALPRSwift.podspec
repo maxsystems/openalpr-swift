@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'OpenALPRSwift'
-  spec.version = '2.0.0'
+  spec.version = '2.0.1'
   spec.summary = 'iOS Framework for the openalpr library ready to use in Swift and Objective-C.'
   spec.homepage = 'https://github.com/yasirmturk/openalpr-swift'
   spec.license = { type: 'GPL 3.0', file: 'LICENSE' }
@@ -9,14 +9,13 @@ Pod::Spec.new do |spec|
 
   spec.platform = :ios, '9.0'
   spec.requires_arc = true
-  spec.source = { git: 'https://github.com/yasirmturk/openalpr-swift.git', tag: "v#{spec.version}", submodules: true }
+  spec.source = { git: 'git@github.com:maxsystems/openalpr-swift.git', tag: "v#{spec.version}", submodules: true }
   spec.source_files = 'openalpr-swift/**/*.{h,mm,swift}'
   spec.resources = ['openalpr-swift/openalpr.conf', 'openalpr-swift/runtime_data']
   spec.frameworks = 'CoreGraphics', 'UIKit'
   spec.weak_framework = 'opencv2'
   spec.static_framework = true
   spec.vendored_frameworks = 'lib/openalpr.framework'
-  spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lz -llept -ltesseract_all', 'LIBRARY_SEARCH_PATHS' => '"${PODS_ROOT}/TesseractOCRiOS/TesseractOCR/lib"', 'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/OpenCV" "${PODS_ROOT}/TesseractOCRiOS/Products"', 'CLANG_WARN_DOCUMENTATION_COMMENTS' => 'NO' }
-  spec.dependency 'OpenCV', '~> 3.1.0.1'
-  spec.dependency 'TesseractOCRiOS', '~> 5.0.1'
+  spec.vendored_libraries =  'lib/libjpeg.a', 'lib/liblept.a', 'lib/libpng.a', 'lib/libtesseract.a', 'lib/libtiff.a'
+  spec.dependency 'OpenCV', '~> 3.4.16'
 end

@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		98314E07D1D4900C146CB48D /* Pods_openalpr_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52507D2B18D6F12E3C6ACE4 /* Pods_openalpr_swift.framework */; };
+		74162C0427AB0830004DB73A /* libtesseract.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74162BFF27AB0764004DB73A /* libtesseract.a */; };
+		74162C0527AB083E004DB73A /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74162C0127AB0764004DB73A /* libjpeg.a */; };
+		74162C0627AB083E004DB73A /* liblept.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74162C0227AB0764004DB73A /* liblept.a */; };
+		74162C0727AB083E004DB73A /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74162C0327AB0764004DB73A /* libpng.a */; };
+		74162C0827AB083E004DB73A /* libtiff.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74162C0027AB0764004DB73A /* libtiff.a */; };
+		74BB77E5279F1E4F00D3DEFF /* openalpr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C14E01981FFFB851001D0DA9 /* openalpr.framework */; };
+		74BB77E6279F1E4F00D3DEFF /* openalpr.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C14E01981FFFB851001D0DA9 /* openalpr.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		74BB77F1279F202000D3DEFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74BB77F0279F202000D3DEFF /* UIKit.framework */; };
 		C13A63261FFF55B40090EAC1 /* openalpr_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13A631C1FFF55B40090EAC1 /* openalpr_swift.framework */; };
 		C13A632B1FFF55B40090EAC1 /* openalpr_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A632A1FFF55B40090EAC1 /* openalpr_swiftTests.swift */; };
 		C13A632D1FFF55B40090EAC1 /* openalpr_swift.h in Headers */ = {isa = PBXBuildFile; fileRef = C13A631F1FFF55B40090EAC1 /* openalpr_swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -15,11 +22,10 @@
 		C13A633D1FFF5AFC0090EAC1 /* OAScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = C13A63391FFF5AFB0090EAC1 /* OAScanner.h */; };
 		C13A633E1FFF5AFC0090EAC1 /* OATypes.h in Headers */ = {isa = PBXBuildFile; fileRef = C13A633A1FFF5AFB0090EAC1 /* OATypes.h */; };
 		C13A633F1FFF5AFC0090EAC1 /* OATypes.mm in Sources */ = {isa = PBXBuildFile; fileRef = C13A633B1FFF5AFB0090EAC1 /* OATypes.mm */; };
-		C14E00941FFF5C09001D0DA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C14E00931FFF5C09001D0DA9 /* UIKit.framework */; };
 		C14E00961FFF5C1C001D0DA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C14E00951FFF5C1C001D0DA9 /* CoreGraphics.framework */; };
 		C14E015F1FFF7F71001D0DA9 /* openalpr.conf in Resources */ = {isa = PBXBuildFile; fileRef = C14E00FD1FFF7F71001D0DA9 /* openalpr.conf */; };
 		C14E01881FFF8EAD001D0DA9 /* runtime_data in Resources */ = {isa = PBXBuildFile; fileRef = C14E01871FFF8EAD001D0DA9 /* runtime_data */; };
-		C14E019B1FFFB851001D0DA9 /* openalpr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C14E01981FFFB851001D0DA9 /* openalpr.framework */; };
+		E3EDB5D5C7AF3598DD58FFCF /* Pods_openalpr_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52507D2B18D6F12E3C6ACE4 /* Pods_openalpr_swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +38,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		74BB77E9279F1E5200D3DEFF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				74BB77E6279F1E4F00D3DEFF /* openalpr.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		74162BFF27AB0764004DB73A /* libtesseract.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtesseract.a; path = lib/libtesseract.a; sourceTree = "<group>"; };
+		74162C0027AB0764004DB73A /* libtiff.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtiff.a; path = lib/libtiff.a; sourceTree = "<group>"; };
+		74162C0127AB0764004DB73A /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = lib/libjpeg.a; sourceTree = "<group>"; };
+		74162C0227AB0764004DB73A /* liblept.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblept.a; path = lib/liblept.a; sourceTree = "<group>"; };
+		74162C0327AB0764004DB73A /* libpng.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng.a; path = lib/libpng.a; sourceTree = "<group>"; };
+		74B14019279F5854003766B0 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = lib/TesseractOCR.framework; sourceTree = "<group>"; };
+		74BB77DE279ED0CF00D3DEFF /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = lib/opencv2.framework; sourceTree = "<group>"; };
+		74BB77EA279F1E5200D3DEFF /* leptonica.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = leptonica.framework; path = lib/leptonica.framework; sourceTree = "<group>"; };
+		74BB77F0279F202000D3DEFF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/iOSSupport/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		A05E13C6FC1921202632E611 /* Pods-openalpr-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-openalpr-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-openalpr-swift/Pods-openalpr-swift.release.xcconfig"; sourceTree = "<group>"; };
 		A52507D2B18D6F12E3C6ACE4 /* Pods_openalpr_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_openalpr_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C13A631C1FFF55B40090EAC1 /* openalpr_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = openalpr_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,10 +88,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C14E019B1FFFB851001D0DA9 /* openalpr.framework in Frameworks */,
+				74162C0527AB083E004DB73A /* libjpeg.a in Frameworks */,
+				74162C0627AB083E004DB73A /* liblept.a in Frameworks */,
+				74162C0727AB083E004DB73A /* libpng.a in Frameworks */,
+				74162C0827AB083E004DB73A /* libtiff.a in Frameworks */,
+				74162C0427AB0830004DB73A /* libtesseract.a in Frameworks */,
+				74BB77E5279F1E4F00D3DEFF /* openalpr.framework in Frameworks */,
 				C14E00961FFF5C1C001D0DA9 /* CoreGraphics.framework in Frameworks */,
-				C14E00941FFF5C09001D0DA9 /* UIKit.framework in Frameworks */,
-				98314E07D1D4900C146CB48D /* Pods_openalpr_swift.framework in Frameworks */,
+				74BB77F1279F202000D3DEFF /* UIKit.framework in Frameworks */,
+				E3EDB5D5C7AF3598DD58FFCF /* Pods_openalpr_swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +168,15 @@
 		C14E00921FFF5C09001D0DA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74162C0127AB0764004DB73A /* libjpeg.a */,
+				74162C0227AB0764004DB73A /* liblept.a */,
+				74162C0327AB0764004DB73A /* libpng.a */,
+				74162BFF27AB0764004DB73A /* libtesseract.a */,
+				74162C0027AB0764004DB73A /* libtiff.a */,
+				74B14019279F5854003766B0 /* TesseractOCR.framework */,
+				74BB77F0279F202000D3DEFF /* UIKit.framework */,
+				74BB77EA279F1E5200D3DEFF /* leptonica.framework */,
+				74BB77DE279ED0CF00D3DEFF /* opencv2.framework */,
 				C14E01981FFFB851001D0DA9 /* openalpr.framework */,
 				C14E00951FFF5C1C001D0DA9 /* CoreGraphics.framework */,
 				C14E00931FFF5C09001D0DA9 /* UIKit.framework */,
@@ -167,6 +210,7 @@
 				C13A63181FFF55B40090EAC1 /* Frameworks */,
 				C13A63191FFF55B40090EAC1 /* Headers */,
 				C13A631A1FFF55B40090EAC1 /* Resources */,
+				74BB77E9279F1E5200D3DEFF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -429,7 +473,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib",
@@ -437,11 +481,16 @@
 				INFOPLIST_FILE = "openalpr-swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yasirmturk.openalpr-swift";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -455,7 +504,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib",
@@ -463,11 +512,16 @@
 				INFOPLIST_FILE = "openalpr-swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yasirmturk.openalpr-swift";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};

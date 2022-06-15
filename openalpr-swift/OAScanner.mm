@@ -115,7 +115,7 @@ using namespace cv;
         [self.delegate didScanBestPlates:bestPlates];
     }
     
-    success(bestPlates);
+    success(scanResults.plates);
 }
 
 - (void)scanImage:(UIImage *)image onSuccess:(onPlateScanSuccess)success onFailure:(onPlateScanFailure)failure {

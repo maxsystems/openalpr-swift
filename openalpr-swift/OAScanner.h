@@ -11,7 +11,7 @@
 
 #import "OATypes.h"
 
-typedef void(^onPlateScanSuccess)(NSArray<OAPlate *> *);
+typedef void(^onPlateScanSuccess)(NSArray<OAPlateResult*>*);
 typedef void(^onPlateScanFailure)(NSError *);
 
 @protocol OAScannerDelegate<NSObject>
